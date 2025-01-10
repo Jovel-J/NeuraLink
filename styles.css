@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    background: rgba(0,0,0,0.9);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 1rem;
+}
+
+.logo-text {
+    color: aqua;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-menu a:hover {
+    color: aqua;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: aqua;
+    transition: width 0.3s;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('product.jpg') center/cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+}
+
+.tagline {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: aqua;
+}
+
+.features {
+    margin: 100px ;
+    padding: 6rem 2rem;
+    background: linear-gradient(45deg, #000, #001a1a);
+}
+
+.blueprint-section {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    padding: 2rem;
+    border: 1px solid aqua;
+    border-radius: 10px;
+    background: rgba(0, 255, 255, 0.05);
+}
+
+.blueprint-image {
+    flex: 0 0 50%;
+}
+
+.blueprint-content {
+    flex: 1;
+}
+
+.blueprint-content h2 {
+    color: aqua;
+    margin-bottom: 1.5rem;
+}
+
+.feature-item {
+    margin-bottom: 1.5rem;
+}
+
+.feature-item h3 {
+    color: aqua;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 2rem;
+    color: aqua;
+    margin: 2rem 0;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 1rem 2rem;
+    background: aqua;
+    color: #000;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    background: #00ffff;
+    transform: scale(1.05);
+}
+
+.social-links {
+    padding: 2rem;
+    text-align: center;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-icon {
+    color: aqua;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+.social-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
